@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>svod.org</title>
+    <meta name="description" content="...">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="./img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+</head>
+
+<body class="vertical_body">
+    <header>
+        <div class="logo" id="logo_header"></div>
+        <nav>
+            <ul id="nav_menu">
+                <li><a href="index.html">выставки</a></li>
+                <li><a href="abrises.html" class="selected_page">абрисы</a></li>
+                <li><a href="artifacts.html">артефакты</a></li>
+                <li><a href="about.html">о проекте</a></li>
+            </ul>
+        </nav>
+        <div class="arrow_but" id="burger"></div>
+    </header>
+    <section id="abrises">
+        <div class="abrises_paragraphs">
+            <h1>АБРИСЫ</h1>
+            <p>серия экспедиций, организованных СВОДом для сбора цифрового архива звукозаписей
+                из лесов в зоне риска
+                исчезновения и одноимённое пространство из ➎ звуковых точек, в которых можно услышать звуки лесов, где
+                с большой вероятностью мы можем никогда не оказаться</p>
+        </div>
+        <div id="abrises_interactive_map">
+            <div id="abrises_map">
+                <div id="abrises_points"></div>
+            </div>
+            <div class="abrises_navigation">
+                <div id="abrises_nav_line">
+                    <div class="abris_number" data-id="abris_1">➊</div>
+                    <div class="abrises_line"></div>
+                    <div class="abris_number" data-id="abris_2">➋</div>
+                    <div class="abrises_line"></div>
+                    <div class="abris_number" data-id="abris_3">➌</div>
+                    <div class="abrises_line"></div>
+                    <div class="abris_number" data-id="abris_4">➍</div>
+                    <div class="abrises_line"></div>
+                    <div class="abris_number" data-id="abris_5">➎</div>
+                </div>
+            </div>
+            <div id="abrises_nav_triangle"></div>
+            <div id="abrises_nav_text">выберитe номер абриса</div>
+            <div id="abrises_points_info">
+                <div id="points_info">
+                    <button id="sound_player_but">&#x23F5</button>
+                    <div id="place_info">
+                        <h2>место:</h1>
+                            <p id="place">
+                                Ханты-Мансийский автономный округ, заболоченный лес
+                            </p>
+                            <h2>время:</h2>
+                            <p id="time">
+                                27 августа 15:43 – 19:50
+                            </p>
+                            <h2>координаты точек записи:</h2>
+                            <p id="coordinates">
+                                62°00’ с.ш., 73°25’ в.д.; 62°01’ с.ш., 73°27’ в.д.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="abrises_paragraphs">
+            <p>термин «абрис» заимствован из практики инвентаризации леса,
+                где он означает контурную отрисовку местности. Подобный «абрис» звукового ландшафта получается и при
+                сборе звукозаписей
+                из множества точек одного пространства. </p>
+        </div>
+        <div id="abrises_flyby"></div>
+        <div id="abrises_structure">
+            <div id="abris_elements">
+                <div id="soundtube"></div>
+                <p> <span>параболический динамик</span> – комбинация динамика и пластикового купола, форма которого
+                    концентрирует звуковые волны прямо под собой</p>
+            </div>
+            <div id="abris"></div>
+            <div id="abris_elements">
+                <div id="nav_element"></div>
+                <p> <span>навигационный элемент</span> – номер абриса с qr-кодом, ведущим на сайт с информацией о
+                    местах, откуда проигрываются записи <br> в каждом абрисе</p>
+            </div>
+        </div>
+        <div class="abrises_paragraphs">
+            <p>проект сопровождает печатное издание, состоящие из глоссария
+                с ключевыми понятиями проекта и фотозина, построенного на принципе столкновения половин симметричных
+                фотографий пространства. Место их стыка становится своеобразным отражением условной границы между
+                внешним звуковым ландшафтом и аудио средой, возникающей в абрисах.
+            </p>
+        </div>
+    </section>
+    <section id="slider" class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+                <img style="margin: 4vw;" class="ar" src="./img/arrow_prev.svg" alt="prev">
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+                <img style="width: 100vw;" class="ar" src="./img/arrow_next.svg" alt="next">
+            </button>
+        </div>
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="./img/slider_cover_animation.gif" alt="обложка">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_1.png" alt="разворот 1">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_2.png" alt="разворот 2">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_3.png" alt="разворот 3">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_4.png" alt="разворот 4">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_5.png" alt="разворот 5">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_6.png" alt="разворот 6">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_7.png" alt="разворот 7">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_8.png" alt="разворот 8">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_9.png" alt="разворот 9">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_10.png" alt="разворот10">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_11.png" alt="разворот 11">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_12.png" alt="разворот 12">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_13.png" alt="разворот 13">
+                </li>
+                <li class="splide__slide">
+                    <img src="./img/slider_spread_14.png" alt="разворот 14">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <canvas id="canvas"></canvas>
+    </section>
+    <footer class="footer">
+        <div class="footer_text">
+            <div>
+                <ul class="footer_nav">
+                    <li><a href="index.html">выставки</a></li>
+                    <li><a href="abrises.html">абрисы</a></li>
+                    <li><a href="artifacts.html">артефакты</a></li>
+                    <li><a href="about.html">о проекте</a></li>
+                </ul>
+            </div>
+            <div class="footer_adress_contacts">
+                <p>Пражская, 85 </p>
+                <p>Москва</p>
+                <p>+7 (495) 990 0000</p>
+                <p>info@svog.org</p>
+            </div>
+            <div class="footer_opening_hours">
+                <p>СВОД открыт для посещения ежедневно</p>
+                <p>ПН–ПТ / 11:00–19:00</p>
+                <p>СБ–ВС / 10:00 – 20:00</p>
+                <p>Инфоцентр: ежедневно / 12:00–19:00</p>
+            </div>
+            <div class="footer_mail">
+                <p>Подписаться на рассылку</p>
+                <form class="subscribe_form">
+                    <input type="email" name="email" class="email_input" placeholder="Email" required>
+                    <button type="submit">↵</button>
+                </form>
+            </div>
+        </div>
+        <div class="logo" id="logo_footer"></div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+<script src="./js/index.js" charset="UTF-8" defer></script>
+<script src="./js/abrises.js" charset="UTF-8" defer></script>
+<script src="./js/form.js" charset="UTF-8" defer></script>
+
+</html>

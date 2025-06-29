@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>svod.org</title>
+    <meta name="description" content="...">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="./img/favicon.png" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body class="vertical_body">
+    <div id="loader"></div>
+    <header>
+        <div class="logo" id="logo_header"></div>
+        <nav>
+            <ul id="nav_menu">
+                <li><a href="index.html" class="selected_page">выставки</a></li>
+                <li><a href="abrises.html">абрисы</a></li>
+                <li><a href="artifacts.html">артефакты</a></li>
+                <li><a href="about.html">о проекте</a></li>
+            </ul>
+        </nav>
+        <div class="arrow_but" id="burger"></div>
+    </header>
+    <section class="about_exhibition hidden">
+        <div></div>
+    </section>
+    <section id="line_up">
+        <div id="time_line"></div>
+        <div id="exhibitions">
+            <div class="exhibition">
+                <p> 30.01 – 30.05.25 <br> Связывая отголоски <br> 1930-х годов</p>
+                <div class="exhib_img" id="exhib_img_1" data-id="exhib_1"></div>
+                <div class="arrow_but show_description_button" data-id="exhib_1"></div>
+                <a href="404.html">купить билеты</a>
+            </div>
+            <div class="exhibition">
+                <p> 25.05 – 15.08.25 <br>Череда затмений: <br> история звукозаписи</p>
+                <div class="exhib_img" id="exhib_img_2" data-id="exhib_2"></div>
+                <div class="arrow_but show_description_button" data-id="exhib_2"></div>
+                <a href="404.html">купить билеты</a>
+            </div>
+            <div class="exhibition">
+                <p> 28.08 – 22.10.25 <br>Звуковые этюды <br> Северной Осетии</p>
+                <div class="exhib_img" id="exhib_img_3" data-id="exhib_3"></div>
+                <div class="arrow_but show_description_button" data-id="exhib_3"></div>
+                <a href="404.html">купить билеты</a>
+            </div>
+        </div>
+        <div id="time_split">
+            <div id="time_split_line"></div>
+            <p>предстоящие</p>
+        </div>
+    </section>
+</body>
+
+<script src="./js/index.js" charset="UTF-8" defer></script>
+<script src="./js/exhibitions.js" charset="UTF-8" defer></script>
+
+</html>

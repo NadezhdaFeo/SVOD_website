@@ -1,0 +1,17 @@
+@keyframes exhib_img_2 {
+    0% {
+        background-image: url(../img/exhib_2_img_1.svg);
+    }
+
+    25% {
+        background-image: url(../img/exhib_2_img_2.png);
+    }
+
+    50% {
+        background-image: url(../img/exhib_2_img_3.svg);
+    }
+
+    75% {
+        background-image: url(../img/exhib_2_img_4.png);
+    }
+}

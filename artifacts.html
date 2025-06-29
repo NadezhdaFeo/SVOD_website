@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>svod.org</title>
+    <meta name="description" content="...">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="./img/favicon.png" rel="shortcut icon" type="image/x-icon">
+</head>
+
+
+<body class="horizontal_body">
+    <header>
+        <div class="logo" id="logo_header"></div>
+        <nav>
+            <ul id="nav_menu">
+                <li><a href="index.html">выставки</a></li>
+                <li><a href="abrises.html">абрисы</a></li>
+                <li><a href="artifacts.html" class="selected_page">артефакты</a></li>
+                <li><a href="about.html">о проекте</a></li>
+            </ul>
+        </nav>
+        <div class="arrow_but" id="burger"></div>
+    </header>
+    <div id="artifacts">
+        <div class="artifact horisontal_artifact" id="summary" data-price="350">
+            <h1>Cаммари 10 ключевых исследований Sound Studies</h1>
+            <p>Формат: А5 <br> Количество страниц: 24</p>
+            <img src="./img/summary_animation.gif" alt="саммари">
+            <p>350 RUB</p>
+            <button class="add_artifact_but">добавить в поле</button>
+        </div>
+        <div class="artifact horisontal_artifact" id="pensil" data-price="250">
+            <h1>Карандаш, как звуковая волна, меняющий длину</h1>
+            <p>Цвет: Серый Красный Синий<br> <br> </p>
+            <img src="./img/pensil.svg" alt="карандаш">
+            <p>250 RUB</p>
+            <button class="add_artifact_but">добавить в поле</button>
+        </div>
+        <div class="artifact vertical_artifact" id="tshirt" data-price="1000">
+            <h1>Футболка персональных определений для СВОДа</h1>
+            <p>Размеры: M L XL XXL</p>
+            <img src="./img/tshirt-animation.gif" alt="футболка">
+            <p>1000 RUB</p>
+            <button class="add_artifact_but">добавить в поле</button>
+        </div>
+        <div class="artifact vertical_artifact" id="field_notebook" data-price="500">
+            <h1>Свод полевых заметок для персональных наблюдений</h1>
+            <p>Формат: А5</p>
+            <img src="./img/field_notebook.svg" alt="свод полевых заметок">
+            <p>500 RUB</p>
+            <button class="add_artifact_but">добавить в поле</button>
+        </div>
+        <div class="artifact vertical_artifact" id="pin" data-price="250">
+            <h1>Значок с ключевым принципом СВОДа</h1>
+            <p>Размер: 4.5 × 4.5 см</p>
+            <img src="./img/pin.svg" alt="пин">
+            <p>250 RUB</p>
+            <button class="add_artifact_but">добавить в поле</button>
+        </div>
+    </div>
+    <div class="field">
+        <div id="field_open_close_but"></div>
+        <div id="update_UI">
+            <div id="count">Добавленных в поле артефактов: <span id="artifacts_number">0</span></div>
+            <div id="sum">Общая стоимость: <span id="total_price"> 0 </span> RUB</div>
+        </div>
+        <div id="selected_artifacts">Поле пока не заполнено</div>
+        <div id="field_buts">
+            <button id="back_to_artifacts">Вернуться к выбору</button>
+        </div>
+    </div>
+</body>
+
+<script src="./js/index.js" charset="UTF-8" defer></script>
+<script src="./js/artifacts.js" charset="UTF-8" defer></script>
+
+</html>
