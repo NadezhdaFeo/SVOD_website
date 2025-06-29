@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ––– Переключение аудиозаписей и отображение точек, где они были сделаны –––
     const navLine = document.getElementById("abrises_nav_line");
     const triangle = document.getElementById("abrises_nav_triangle");
     const placeP = document.getElementById("place");
@@ -8,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const pointsContainer = document.getElementById("abrises_points");
 
     let currentAudio = null;
-
 
     const abrisData = {
         abris_1: {
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // слайдер с разворотами печатного издания
+    // ––– Слайдер с разворотами печатного издания –––
     const slider = new Splide('#slider', {
         pagination: false
     });
     slider.mount()
 
-    // рисование на абрисе местности, реализованное с подключением Fabric.js
+    // ––– Рисование на абрисе местности, реализованное с подключением Fabric.js –––
     const canvas = new fabric.Canvas('canvas', { width: 1400, height: 560, });
 
     var pencilSVG = `<svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <rect width="44.9126" height="45.0312" fill="#D9D9D9"/>
     </mask>
     <g mask="url(#mask0_1125_2)">
-    <rect x="29.3276" y="1.53262" width="19.8733" height="28.4225" transform="rotate(45 29.3276 1.53262)" fill="#9D9D9D" stroke="black" stroke-width="2"/>
+    <rect x="29.3276" y="1.53262" width="19.8733" height="28.4225" transform="rotate(45 29.3276 1.53262)" fill="#0C9648" stroke="black" stroke-width="2"/>
     <path d="M7.37538 24.6237L20.2891 37.5374L2.34346 42.57L7.37538 24.6237Z" fill="#D9D9D9" stroke="black" stroke-width="2"/>
     <path d="M4.43901 35.0947L9.81758 40.4733L2.34324 42.5698L4.43901 35.0947Z" fill="#050505" stroke="black" stroke-width="2"/>
     <path d="M33.9336 5.93872L13.8239 26.0485" stroke="black" stroke-width="2"/>
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     canvas.freeDrawingCursor = `url(${pencilURL}) 2 45, auto`;
 
-    const imageUrl = '/img/forest_abris.jpg';
+    const imageUrl = '../img/forest_abris.jpg';
     fabric.Image.fromURL(imageUrl, function (img) {
         img.set({
             left: 450,
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const drawingMode = true;
     canvas.isDrawingMode = drawingMode;
 
-    canvas.freeDrawingBrush.color = '#000000';
+    canvas.freeDrawingBrush.color = '#0C9648';
     canvas.freeDrawingBrush.width = 3;
 
     canvas.on('path:created', function (event) {

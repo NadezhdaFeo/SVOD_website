@@ -223,7 +223,6 @@ a:hover {
     transform: translate(-50%, 0%);
     border-bottom: 2px solid black;
     z-index: 1;
-    margin-top: 27.5vw;
 }
 
 #exhibitions {
@@ -792,7 +791,7 @@ img {
     font-family: var(--font-family);
     background-color: #0C9648;
     border-top: 2px solid black;
-    z-index: 7;
+    z-index: 5;
     transition: transform 0.3s ease, margin-top 0.5s ease;
 }
 

@@ -207,4 +207,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    function updateTimeLinePosition() {
+        const arrowBut = document.getElementById('nav_arrow_but');
+        const timeLine = document.getElementById('time_line');
+        const lineUp = document.getElementById('line_up');
+
+        if (!arrowBut || !timeLine || !lineUp) return;
+
+        const arrowRect = arrowBut.getBoundingClientRect();
+        const lineUpRect = lineUp.getBoundingClientRect();
+
+        const centerY = arrowRect.top + arrowRect.height / 2 + window.scrollY;
+
+        const offsetTop = centerY - lineUpRect.top - window.scrollY;
+
+        timeLine.style.top = `${offsetTop}px`;
+    }
+
+    window.addEventListener('load', updateTimeLinePosition);
+    window.addEventListener('resize', updateTimeLinePosition);
+
 });
