@@ -166,7 +166,7 @@
 
     footer {
         width: 100vw;
-        height: 190vw;
+        height: 220vw;
         flex-direction: column-reverse;
         z-index: 1;
         margin-top: 5vw;
@@ -179,7 +179,7 @@
 
     .footer_text {
         width: 100vw;
-        height: 180vw;
+        height: 220vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -285,15 +285,10 @@
 
     #abrises_nav_line {
         width: 22vw;
-        font-size: 8vw;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 3;
-    }
-
-    .abris_number {
-        font-size: 10vw;
     }
 
     #abrises_points {
@@ -314,6 +309,22 @@
         pointer-events: none;
     }
 
+    @keyframes radarPulse {
+        0% {
+            transform: translate(-50%, -50%);
+            width: 1vw;
+            height: 1vw;
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+            width: 10vw;
+            height: 10vw;
+            opacity: 0;
+        }
+    }
+
     #abrises_nav_triangle {
         margin: 2vw;
         width: 16.8vw;
@@ -331,6 +342,10 @@
         height: 2px;
         background-color: #000;
         align-self: center;
+    }
+
+    .abris_number {
+        font-size: 20vw;
     }
 
     #sound_player_but {
@@ -391,19 +406,8 @@
         margin-bottom: 4vw;
     }
 
-    #nav_element:hover {
-        width: 21vw;
-        height: 21vw;
-    }
-
     #abris {
         display: none;
-    }
-
-    #abris:hover {
-        background: url(../img/abris_2.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 
     #slider {
@@ -414,22 +418,172 @@
         margin-bottom: 3vw;
     }
 
-    .splide__slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 4.5vw;
-    }
-
     .splide__slide>img {
         width: 90vw;
     }
 
     .splide__arrow {
-        margin-right: 0.5vw;
-        margin-left: 0.5vw;
+        margin-right: 0vw;
+        margin-left: 0vw;
     }
 
+    .about_exhibition {
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+        font-family: var(--font-family);
+        text-align: center;
+        overflow: auto;
+        padding-top: 8vw;
+    }
+
+    .about_exhibition.hidden {
+        display: none;
+    }
+
+    .about_exhibition>h1,
+    h3 {
+        font-family: var(--font-family);
+        margin-bottom: 2vw;
+    }
+
+    .about_exhibition>img {
+        width: 25vw;
+        height: 17.5vw;
+    }
+
+    .about_exhibition>p {
+        text-align: left;
+        hyphens: auto;
+        line-height: 1.4vw;
+    }
+
+
+    #artifacts {
+        width: 100vw;
+        height: 72vh;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        align-items: center;
+        padding-left: 5vw;
+        margin-top: 15vw;
+    }
+
+    #artifacts::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artifact {
+        height: 72vh;
+        padding: 1vw;
+        margin-right: 1vw;
+        background-color: var(--dark-grey);
+        font-size: 5vw;
+        margin-top: 25vw;
+    }
+
+    .artifact>h1,
+    p,
+    img {
+        margin-bottom: 4vw;
+    }
+
+    .horisontal_artifact {
+        width: 70vw;
+    }
+
+    .horisontal_artifact>img {
+        width: 30vw;
+    }
+
+    .artifact_prise {
+        text-align: center;
+    }
+
+    .vertical_artifact {
+        width: 100vw;
+    }
+
+    .vertical_artifact>img {
+        width: 16vw;
+    }
+
+    .field {
+        width: 100vw;
+        height: 92vh;
+        margin-top: 195vh;
+        transition: transform 0.3s ease, margin-top 0.5s ease;
+    }
+
+    .hidden {
+        margin-top: 25vh;
+        animation: add_margin 700ms linear;
+    }
+
+    #field_open_close_but {
+        width: 7vw;
+        height: 7vw;
+        margin-top: -4vw;
+    }
+
+    .add_artifact_but,
+    .remove_artifact_but {
+        font-size: 5vw;
+    }
+
+    #update_UI {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 5vw;
+        line-height: var(--line-height-mobile);
+        margin-top: -2vw;
+    }
+
+    #selected_artifacts {
+        width: 100vw;
+        height: 60.8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        font-size: 1.1vw;
+        margin: -0.5vw;
+        padding-left: 1.5vw;
+    }
+
+    #selected_artifacts::-webkit-scrollbar {
+        display: none;
+    }
+
+    #selected_artifacts {
+        scrollbar-width: none;
+    }
+
+    #back_to_artifacts,
+    #pay_but {
+        font-family: var(--font-family);
+        font-size: 5vw;
+        line-height: 1.5vw;
+    }
+
+    #back_to_artifacts:hover,
+    #pay_but:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    #field_buts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1vw;
+    }
 
 
 }
