@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     canvas.freeDrawingCursor = `url(${pencilURL}) 2 45, auto`;
 
-    const imageUrl = '../img/forest_abris.jpg';
+    const imageUrl = './img/forest_abris.jpg';
     fabric.Image.fromURL(imageUrl, function (img) {
         img.set({
             left: 450,
