@@ -227,4 +227,34 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('load', updateTimeLinePosition);
     window.addEventListener('resize', updateTimeLinePosition);
 
+
+    window.addEventListener('load', () => {
+        const loaderAlreadyShown = sessionStorage.getItem('loaderShown');
+
+        if (loaderAlreadyShown === 'true') {
+
+            loader.style.display = 'none';
+            return;
+        }
+
+        generateGrid();
+
+        if (isTouchDevice) {
+            startMobileAnimation();
+        } else {
+            window.addEventListener('mousemove', rotateToCursor);
+        }
+
+        // Только по клику скрываем loader
+        loader.addEventListener('click', () => {
+            sessionStorage.setItem('loaderShown', 'true');
+
+            loader.classList.add('fade-out');
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+    });
+
 });

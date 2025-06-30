@@ -162,38 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-    window.addEventListener('load', () => {
-        const loaderAlreadyShown = sessionStorage.getItem('loaderShown');
-
-        if (loaderAlreadyShown === 'true') {
-
-            loader.style.display = 'none';
-            return;
-        }
-
-        loader.style.display = 'grid'
-
-        generateGrid();
-
-        if (isTouchDevice) {
-            startMobileAnimation();
-        } else {
-            window.addEventListener('mousemove', rotateToCursor);
-        }
-
-        // Только по клику скрываем loader
-        loader.addEventListener('click', () => {
-            sessionStorage.setItem('loaderShown', 'true');
-
-            loader.classList.add('fade-out');
-
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        });
-    });
-
     // ––– Общая для всех старниц механика открытия меню на мобильной версии –––
 
     const burger = document.querySelector('.burger');
