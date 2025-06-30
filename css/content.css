@@ -41,9 +41,9 @@ body {
 }
 
 :root {
-    --font-size-desktop: 1.4vw;
+    --font-size-desktop: 1.2vw;
     --font-size-tablet-vertical: 2.3vw;
-    --font-size-mobile: 6.5vw;
+    --font-size-mobile: 6vw;
     --line-height-desktop: 1.3vw;
     --line-height-tablet-vertical: 2.1vw;
     --line-height-mobile: 7vw;
@@ -155,14 +155,18 @@ header {
     margin-left: -12vw;
 }
 
-#nav_menu {
+.nav_menu {
     display: flex;
     flex-direction: row;
     font-family: var(--font-family);
     font-size: 1.1vw;
 }
 
-#nav_menu>li {
+.nav_menu.open {
+    display: flex;
+}
+
+.nav_menu>li {
     padding-left: 30px;
 }
 
@@ -199,11 +203,11 @@ a:hover {
     transform: translateY(0.4vw);
 }
 
-.arrow_but.active {
+.arrow_but.rotate {
     transform: rotate(180deg);
 }
 
-#burger {
+.burger {
     display: none;
     transition: all 0.2s linear;
 }
@@ -470,6 +474,7 @@ input:-webkit-autofill:active {
 
 #abrises {
     align-items: center;
+    font-size: var(--font-size-desktop);
 }
 
 #abrises h1 {
@@ -533,6 +538,10 @@ input:-webkit-autofill:active {
     align-items: center;
     justify-content: center;
     z-index: 3;
+}
+
+.abris_number {
+    font-size: 8vw;
 }
 
 #abrises_points {
@@ -898,7 +907,6 @@ img {
     overflow: auto;
     padding-top: 8vw;
 }
-
 
 .about_exhibition.hidden {
     display: none;

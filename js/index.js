@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ––– Общая для всех старниц механика скролла –––
     const header = document.querySelector('header');
     const footer = document.querySelector('footer');
-    const map = document.getElementById('abrises_nav_line');
+    const map = document.getElementById('place_info');
     const slider = document.getElementById('slider');
 
     let lastScrollTop = 0;
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let mapVisible = false;
     let sliderVisible = false;
 
-    const SCROLL_THRESHOLD = 100; // минимальная высота скролла, чтобы сработало скрытие 
+    const SCROLL_THRESHOLD = 50; // минимальная высота скролла, чтобы сработало скрытие 
     const DELTA = 5; // порог чувствительности
 
     // Наблюдение за видимостью футера, карты и слайдера, чтобы когда они видны, header был невиден
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, {
         root: null,
-        threshold: [1.0, 0.4, 1.0] // порог видимости: 20% для карты, 40% для футера 
+        threshold: [1.0, 1.0, 1.0] // порог видимости: 20% для карты, 40% для футера 
     });
 
     if (footer) observer.observe(footer);
@@ -194,5 +194,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // ––– Общая для всех старниц механика открытия меню на мобильной версии –––
+
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.nav_menu');
+    const menuLinks = document.querySelectorAll('.nav_menu a');
+
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        burger.classList.toggle('rotate');
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('open');
+            burger.classList.remove('rotate');
+        });
+    });
 
 });

@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageUrl = './img/forest_abris.jpg';
     fabric.Image.fromURL(imageUrl, function (img) {
         img.set({
-            left: 450,
+            left: 470,
             top: 50,
             selectable: false
         });
