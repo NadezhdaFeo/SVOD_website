@@ -106,25 +106,29 @@
     }
 
     .about_exhibition {
-        width: 94vw;
+        width: 100vw;
         margin-top: 25vw;
         margin-bottom: 8vw;
-        font-family: var(--font-family);
         font-size: var(--font-size-mobile);
+        overflow: hidden;
     }
 
     .about_exhibition>h1,
     h3 {
+        font-family: var(--font-family);
+        width: 100vw;
         margin-bottom: 20vw;
     }
 
     .about_exhibition>img {
-        width: 54vw;
-        height: 38vw;
+        width: 64vw;
+        height: 44vw;
+        margin-top: 10vw;
     }
 
     .about_exhibition>p {
-        margin-top: 20vw;
+        width: 90vw;
+        margin-top: 15vw;
         line-height: var(--line-height-mobile);
     }
 
@@ -271,7 +275,7 @@
     }
 
     .abrises_navigation {
-        width: 42.1vw;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -284,16 +288,15 @@
     }
 
     #abrises_nav_line {
-        width: 22vw;
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 3;
     }
 
     #abrises_points {
         position: relative;
-        width: 100%;
+        width: 95%;
         height: 100%;
     }
 
@@ -333,8 +336,8 @@
 
     #abrises_nav_line>div {
         font-family: var(--font-family);
-        font-size: 2.5vw;
-        margin: -0.2vw;
+        font-size: 12vw;
+        margin: 2.5vw;
     }
 
     .abrises_line {
@@ -375,6 +378,7 @@
     #abrises_flyby {
         width: 100vw;
         height: 50vw;
+        margin-right: 1vw;
     }
 
     #abrises_structure {
@@ -410,12 +414,17 @@
         display: none;
     }
 
+    #printed_matter_discrp {
+        display: none;
+    }
+
     #slider {
         width: 100vw;
         height: 70vw;
         padding-top: 4vw;
         background-color: var(--dark-grey);
         margin-bottom: 3vw;
+        margin-right: 1vw;
     }
 
     .splide__slide>img {
@@ -426,42 +435,6 @@
         margin-right: 0vw;
         margin-left: 0vw;
     }
-
-    .about_exhibition {
-        width: 25vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 8vw;
-        margin-bottom: 8vw;
-        font-family: var(--font-family);
-        text-align: center;
-        overflow: auto;
-        padding-top: 8vw;
-    }
-
-    .about_exhibition.hidden {
-        display: none;
-    }
-
-    .about_exhibition>h1,
-    h3 {
-        font-family: var(--font-family);
-        margin-bottom: 2vw;
-    }
-
-    .about_exhibition>img {
-        width: 25vw;
-        height: 17.5vw;
-    }
-
-    .about_exhibition>p {
-        text-align: left;
-        hyphens: auto;
-        line-height: 1.4vw;
-    }
-
 
     #artifacts {
         width: 100vw;
@@ -516,7 +489,7 @@
     .field {
         width: 100vw;
         height: 92vh;
-        margin-top: 195vh;
+        margin-top: 90vh;
         transition: transform 0.3s ease, margin-top 0.5s ease;
     }
 
