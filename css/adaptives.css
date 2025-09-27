@@ -48,11 +48,8 @@
     }
 
     #line_up {
-        position: relative;
-        justify-content: start;
-        align-items: center;
-        font-family: EucidCircularB_Regular;
         font-size: var(--font-size-mobile);
+        margin-top: 10vw;
     }
 
     #time_line {
@@ -170,14 +167,14 @@
 
     footer {
         width: 100vw;
-        height: 220vw;
+        height: 238vw;
         flex-direction: column-reverse;
         z-index: 1;
         margin-top: 5vw;
     }
 
     #logo_footer {
-        margin-bottom: -17vw;
+        margin-bottom: -17.4vw;
         margin-left: 58vw;
     }
 
@@ -195,6 +192,7 @@
     .footer_nav {
         font-size: var(--font-size-mobile);
         line-height: var(--line-height-mobile);
+        margin-top: 18vw;
     }
 
     .footer_nav>li {
@@ -465,16 +463,18 @@
     p,
     img {
         width: 80vw;
-        margin-bottom: 8vw;
+        margin-bottom: 6vw;
     }
 
     .horisontal_artifact {
-        width: 120vh;
+        width: 100vw;
         padding: 4vw;
     }
 
     .horisontal_artifact>img {
         width: 82vw;
+        margin-top: 12vw;
+        margin-bottom: 12vw;
     }
 
     .artifact_prise {
@@ -482,7 +482,7 @@
     }
 
     .vertical_artifact {
-        width: 100vw;
+        width: 84vw;
         padding: 4vw;
     }
 
@@ -552,6 +552,10 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 1vw;
+    }
+
+    #canvas_section {
+        display: none;
     }
 
 }
