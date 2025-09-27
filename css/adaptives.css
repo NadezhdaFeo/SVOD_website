@@ -443,7 +443,7 @@
         overflow-y: hidden;
         display: flex;
         align-items: center;
-        padding-left: 5vw;
+        padding-left: 0vw;
         margin-top: 15vw;
     }
 
@@ -452,26 +452,29 @@
     }
 
     .artifact {
-        height: 72vh;
+        height: 60vh;
         padding: 1vw;
-        margin-right: 1vw;
         background-color: var(--dark-grey);
         font-size: 5vw;
-        margin-top: 25vw;
+        margin-top: 10vw;
+        margin-right: 0vw;
+        margin-left: 4vw;
     }
 
     .artifact>h1,
     p,
     img {
-        margin-bottom: 4vw;
+        width: 80vw;
+        margin-bottom: 8vw;
     }
 
     .horisontal_artifact {
-        width: 70vw;
+        width: 120vh;
+        padding: 4vw;
     }
 
     .horisontal_artifact>img {
-        width: 30vw;
+        width: 82vw;
     }
 
     .artifact_prise {
@@ -480,16 +483,19 @@
 
     .vertical_artifact {
         width: 100vw;
+        padding: 4vw;
     }
 
     .vertical_artifact>img {
-        width: 16vw;
+        width: 62vw;
+        margin-left: 8vw;
     }
 
     .field {
         width: 100vw;
-        height: 92vh;
-        margin-top: 90vh;
+        height: 95vh;
+        margin-top: 180vh;
+        justify-content: flex-start;
         transition: transform 0.3s ease, margin-top 0.5s ease;
     }
 
@@ -499,14 +505,16 @@
     }
 
     #field_open_close_but {
-        width: 7vw;
-        height: 7vw;
-        margin-top: -4vw;
+        width: 10vw;
+        height: 10vw;
+        margin-top: -6vw;
     }
 
     .add_artifact_but,
     .remove_artifact_but {
         font-size: 5vw;
+        right: 4vw;
+        bottom: 6vw;
     }
 
     #update_UI {
@@ -515,20 +523,15 @@
         align-items: center;
         font-size: 5vw;
         line-height: var(--line-height-mobile);
-        margin-top: -2vw;
+        margin-top: 2vw;
     }
 
     #selected_artifacts {
         width: 100vw;
-        height: 60.8vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        font-size: 1.1vw;
+        height: 75vh;
+        font-size: 5vw;
         margin: -0.5vw;
-        padding-left: 1.5vw;
+        padding-left: 0vw;
     }
 
     #selected_artifacts::-webkit-scrollbar {
@@ -541,15 +544,8 @@
 
     #back_to_artifacts,
     #pay_but {
-        font-family: var(--font-family);
         font-size: 5vw;
         line-height: 1.5vw;
-    }
-
-    #back_to_artifacts:hover,
-    #pay_but:hover {
-        text-decoration: underline;
-        text-underline-offset: 3px;
     }
 
     #field_buts {
@@ -557,6 +553,5 @@
         flex-direction: column;
         margin-bottom: 1vw;
     }
-
 
 }
